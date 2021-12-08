@@ -11,8 +11,6 @@ import 'styling/jobshow.css'
 import 'styling/home.css'
 import "styling/job.css"
 
-
-
 ReactDOM.render(
     <div>
         <ToastContainer
