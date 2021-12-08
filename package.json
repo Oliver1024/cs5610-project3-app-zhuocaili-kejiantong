@@ -1,5 +1,6 @@
 {
   "name": "on-board",
+  "proxy": "http://localhost:3300",
   "version": "0.1.0",
   "private": false,
   "engines": {
@@ -38,7 +39,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "devstart": "concurrently \"nodemon ./server.js\" \"react-scripts start\"",
+    "devstart": "concurrently \"nodemon ./server.js\" \"PORT=3000 react-scripts start\"",
     "start": "node ./server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
