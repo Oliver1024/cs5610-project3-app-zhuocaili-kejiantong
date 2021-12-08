@@ -1,6 +1,5 @@
 {
   "name": "on-board",
-  "proxy": "https://onboardapi.herokuapp.com",
   "version": "0.1.0",
   "private": false,
   "engines": {
