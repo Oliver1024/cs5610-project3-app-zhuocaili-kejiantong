@@ -1,0 +1,94 @@
+.navbar-onboard{
+    padding: 0px;
+    z-index: 99;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    font-size: 1.3rem;
+    align-items: center;
+    background: rgb(255, 255, 255);
+}
+
+.navbar-search{
+    width: 60%;
+    
+}
+
+.search-bar-nav{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.nav-title-onboard{
+    font-family: 'Plaster', cursive;
+    font-size: 3rem;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(214, 183, 80);
+    transition: 0.3s ease-in-out;
+}
+
+.nav-title-onboard:hover{
+    color: rgb(168, 132, 11);
+}
+
+.btn-search-nav{
+    width: 20%;
+    font-family: 'Squada One', cursive;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(231, 200, 59);
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    border: 0;
+}
+
+.btn-search-nav:hover{
+    background: rgb(141, 116, 4);
+    color: rgb(255, 255, 255);
+}
+
+.nav-content-onboard{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.navbar-btn-onboard{
+    text-align: center;
+    font-size: 1.2rem;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    font-family: 'Squada One', cursive;
+    color: rgb(214, 183, 80);
+    border: 2px solid rgb(214, 183, 80);
+    justify-content: center;
+    cursor: pointer;
+    background: none;
+    border-radius: none;
+    height: 30px;
+    border-radius: 0px;
+    background: white;
+}
+
+.dropdown-menu{
+    border: none;
+    background: none;
+}
+
+
+.navbar-btn-onboard:hover{
+    filter: brightness(0.9);
+    color: rgb(214, 183, 80);
+    background: white;
+}

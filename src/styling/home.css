@@ -1,0 +1,32 @@
+.home{
+    height: 100%;
+    background-image: url("resources/home.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-wrapper{
+    width: 60%;
+    opacity: 0.5;
+    transition: 0.5s ease-in-out;
+}
+
+.home-wrapper:hover{
+    opacity: 1;
+}
+
+.home-title{
+    width: 100%;
+    font-family: 'Plaster', cursive;
+    font-size: 8rem;
+    text-align: center;
+    color: rgb(214, 191, 115);
+}
+
+.home-title:hover{
+    color: rgb(214, 191, 115);
+}

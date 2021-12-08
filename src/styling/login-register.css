@@ -1,0 +1,54 @@
+.login{
+    height: 100vh;
+    background: rgb(233, 229, 218);
+}
+
+.login-wrapper{
+    background: white;
+    padding: 10px;
+    font-family: 'Squada One', cursive;
+    width: 500px;
+    border: 1px solid rgb(221, 184, 19);
+    border-radius: 10px;
+}
+
+.login-title{
+    color:  rgb(221, 184, 19);
+    font-size: 2.5rem;
+}
+
+.input-label{
+    font-size: 1.5rem;
+}
+
+.input-group{
+    width: 80%;
+}
+
+.input-info{
+    font-size: 1.2rem;
+    width: 100%;
+    border: none;
+    border: 1px solid rgb(221, 184, 19);
+    border-radius: 5px;
+}
+
+.btn-form{
+    width: 80%;
+    font-size: 2rem;
+    background: rgb(255, 225, 93);
+}
+
+.btn-form:hover{
+    background: rgb(199, 164, 7);
+    color: white;
+}
+
+.btn-sec{
+    font-size: 1.2rem;
+    color: rgb(197, 162, 47);
+}
+
+.btn-sec:hover{
+    color: rgb(87, 67, 4);
+}

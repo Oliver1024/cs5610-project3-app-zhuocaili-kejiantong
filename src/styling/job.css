@@ -1,0 +1,71 @@
+.job-wrapper{
+    width: 800px;
+    background: rgb(255, 255, 255);
+    border: 3px rgb(255, 255, 255) solid;
+    font-family: 'Squada One', cursive;
+    transition: 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.job-wrapper:hover{
+    box-shadow: 10px 5px 10px rgb(189, 189, 189);
+    border: 5px rgb(238, 207, 31) solid;
+}
+
+.job-title{
+    color: rgb(240, 199, 18);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.job-subtitle{
+    font-size: 1.5rem;
+}
+
+.description-wrapper{
+    width: 95%;
+}
+
+
+.info {
+    font-family: 'Squada One', cursive;
+    text-align: center;
+    font-size: 1.2rem;
+    width: auto;
+    background: rgb(238, 207, 122);
+    color: white;
+    border-radius: 3px;
+    width: 150px;
+}
+
+.btn-job{
+    color: white;
+    width: 200px;
+    font-size: 1.5rem;
+    background:rgb(233, 208, 138);
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Squada One', cursive;
+}
+
+.btn-job:hover{
+    color: white;
+    background:rgb(138, 111, 39);
+}
+
+.job-footer{
+    margin-bottom: 3px;
+    margin-left: 10px;
+    color: black;
+}
+
+#user-email{
+    width: auto;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+.editor-wrapper{
+    width: 80%;
+}

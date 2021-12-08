@@ -1,0 +1,38 @@
+.jobshow{
+    height: 100vh;
+    background: rgb(233, 229, 218);
+}
+
+.jobshow-wrapper{
+    margin-top: 10vh;
+    background: white;
+    padding: 20px;
+    font-family: 'Squada One', cursive;
+    width: 1000px;
+    border-radius: 10px;
+    height: 80vh;
+}
+
+.jobshow-header{
+    /* height: 10%; */
+    margin-bottom: 10px;
+}
+
+.jobshow-title{
+    font-size: 4rem;
+}
+
+/* .jobshow-content{
+    height: 70%;
+} */
+
+.heart{
+    margin-right: 10px;
+}
+
+.status{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 0;
+    margin: 0;
+}

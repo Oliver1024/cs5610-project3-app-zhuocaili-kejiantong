@@ -1,0 +1,14 @@
+.main{
+    background: rgb(233, 229, 218);
+    min-height: 100vh;
+    padding: 80px;
+}
+
+.posts-title{
+    font-family: 'Squada One', cursive;
+}
+
+.search-title{
+    font-family: 'Squada One', cursive;
+    font-size: 3rem;
+}

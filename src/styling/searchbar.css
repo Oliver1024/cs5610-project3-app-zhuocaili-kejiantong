@@ -1,0 +1,37 @@
+.search-bar{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.search{
+    width: 60%;
+    font-family: 'Josefin Slab', serif;
+    font-size: 1.5rem;
+    border: 0;
+    opacity: 0.8;
+    margin-right: 5px;
+    text-align: center;
+    border: 2px solid rgb(202, 193, 93);
+}
+
+.search:hover{
+    opacity: 1;
+}
+
+.btn-search{
+    width: 25%;
+    font-family: 'Squada One', cursive;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 194, 81);
+    opacity: 0.5;
+    border: 0;
+}
+
+.btn-search:hover{
+    background: rgb(255, 211, 15);
+    color: rgb(255, 255, 255);
+}
