@@ -52,11 +52,11 @@ function Router() {
                 <Route path="/login" element={<Login user={user} setUser={setUser} />} />
                 <Route path="/register" element={<Register user={user} setUser={setUser}/>} />
                 <Route path="/job/:jobid" element={<JobShow user={user} setUser={setUser} setSearch={setSearch} />} />
-                {user.status === LOGGEDIN ? <Route path="/profile" element={<UserProfile user={user} />} /> : null}
-                {user.status === LOGGEDIN ? <Route path="/create" element={<CreatePost user={user} />} /> : null}
-                {user.status === LOGGEDIN ? <Route path="/edit/:jobid" element={<EditPost user={user} />} /> : null}
-                {user.status === LOGGEDIN ? <Route path="/posts" element={<Posts user={user} setUser={setUser} setSearch={setSearch} />} /> : null}
-                {user.status === LOGGEDIN ? <Route path="/favorites" element={<Favorites user={user} setUser={setUser} setSearch={setSearch} />} /> : null}
+                {user.status !== LOGGEDOUT ? <Route path="/profile" element={<UserProfile user={user} />} /> : null}
+                {user.status !== LOGGEDOUT ? <Route path="/create" element={<CreatePost user={user} />} /> : null}
+                {user.status !== LOGGEDOUT ? <Route path="/edit/:jobid" element={<EditPost user={user} />} /> : null}
+                {user.status !== LOGGEDOUT ? <Route path="/posts" element={<Posts user={user} setUser={setUser} setSearch={setSearch} />} /> : null}
+                {user.status !== LOGGEDOUT ? <Route path="/favorites" element={<Favorites user={user} setUser={setUser} setSearch={setSearch} />} /> : null}
                 <Route path="*" element={<NotFound user={user} setUser={setUser} search={search} setSearch={setSearch} />} />
             </Routes>
         </BrowserRouter>
