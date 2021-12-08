@@ -17,7 +17,7 @@ app.use(express.json())
     .use(express.urlencoded({ extended: true }))
     .use(cookieParser())
     .use(cors({
-        origin: 'http://localhost:3000',
+        origin: 'http://localhost',
         methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD', 'DELETE'],
         credentials: true
     }))
@@ -41,7 +41,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 //     // res.sendFile(path.join(__dirname, 'build', 'index.html'));
 // });
 // 3300
-app.listen(3300, function () {
+app.listen(80, function () {
     console.log('Starting server at 3300');
 });
 

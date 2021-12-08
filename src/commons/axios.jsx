@@ -3,7 +3,7 @@ import _axios from 'axios';
 const axios = baseURL => {
     const instance = _axios.create({
         withCredentials: true,
-        baseURL: "http://localhost:3300",
+        baseURL: "https://onboardapi.herokuapp.com",
         timeout: 10000
     });
 

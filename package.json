@@ -1,6 +1,6 @@
 {
   "name": "on-board",
-  "proxy": "http://localhost:3300",
+  "proxy": "https://onboardapi.herokuapp.com",
   "version": "0.1.0",
   "private": false,
   "engines": {
@@ -39,8 +39,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "devstart": "concurrently \"nodemon ./server.js\" \"PORT=3000 react-scripts start\"",
-    "start": "node ./server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
