@@ -33,7 +33,7 @@ function NavBar({ user, setUser, setSearch }) {
 
   useEffect(() => {
     renderImage();
-  }, [user.image]);
+  }, [user.status]);
 
   function renderImage() {
     return (

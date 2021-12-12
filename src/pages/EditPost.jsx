@@ -55,23 +55,6 @@ function EditPost(props) {
       .catch((err) => toast.error(err));
   }
 
-  function uploadImage() {
-    const data = new FormData();
-    data.append("file", inputImage);
-    data.append("upload_preset", process.env.CLOUD_UPLOAD_PRESET);
-    data.append("api_key", process.env.CLOUD_API_KEY);
-    data.append("cloud_name", process.env.CLOUD_NAME);
-    fetch(process.env.CLOUDINARY_URL, {
-      method: "post",
-      body: data,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setPost({ ...post, image: data.url });
-      })
-      .catch((err) => toast.error(err));
-  }
-
   const editor = useRef(null);
 
   const config = {
