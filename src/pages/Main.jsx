@@ -12,21 +12,29 @@ function Main(props) {
         axios.get(`/api/jobs/search/${result}`).then(
             response => {
                 setPosts(response.data)
+                render()
             }
-        )
+        ).catch(err => {
+            setPosts([])
+        })
     }, [props.search])
+
+    function render(){
+        return(<div className="page-wrapper main d-flex w-100 justify-content-center">
+                    <div className="posts-wrapper">
+                        {props.search !== "" ? <div className="card-title search-title job-title ">Search result for {props.search}</div> : null}
+                        {posts.map(post => (<JobPost job={post} />)
+                        )}
+                    </div>
+                </div>
+        )
+    }
 
 
     return (
         <React.Fragment>
             <NavBar user={props.user} setUser={props.setUser} setSearch={props.setSearch} />
-            <div className="page-wrapper main d-flex w-100 justify-content-center">
-                <div className="posts-wrapper">
-                    {props.search !== "" ? <div className="card-title search-title job-title ">Search result for {props.search}</div> : null}
-                    {posts.map(post => (<JobPost job={post} />)
-                    )}
-                </div>
-            </div>
+            {render()}
         </React.Fragment>
     )
 }
