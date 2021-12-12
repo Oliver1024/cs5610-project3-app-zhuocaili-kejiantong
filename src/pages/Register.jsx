@@ -6,9 +6,7 @@ import { toast } from 'react-toastify'
 
 function Register({ user, setUser }) {
 
-    // const { register, handleSubmit, formState: { errors } } = useForm();
     const navigate = useNavigate()
-    // const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     const [userData, setUserData] = useState({
         email: '',
         password: '',

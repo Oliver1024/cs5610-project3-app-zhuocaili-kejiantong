@@ -38,9 +38,7 @@ function UserProfile({ user, setUser }) {
               ...user,
               image: response.data.image,
             });
-            navigate("/main", { replace: true });
-
-            toast.success("Successfully update information");
+            window.location.reload();
           })
           .catch((error) => {
             toast.error(error.message);
@@ -113,7 +111,7 @@ function UserProfile({ user, setUser }) {
                 {userData.image !== "" ? (
                   <div className="d-flex flex-column align-items-center">
                     <label className="input-label text-muted mt-3">
-                      Previous Image
+                      Current Image
                     </label>
                     <img
                       src={userData.image}

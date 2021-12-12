@@ -1,9 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "commons/axios";
-import "styling/jobshow.css";
-import "styling/job.css";
-import "styling/login-register.css";
 import { toast } from "react-toastify";
 import JoditEditor from "jodit-react";
 
@@ -13,7 +10,7 @@ function CreatePost({ user }) {
   const [inputImage, setInputImage] = useState(undefined);
 
   const config = {
-    readonly: false, // all options from https://xdsoft.net/jodit/doc/
+    readonly: false, 
   };
 
   let email = user.email;

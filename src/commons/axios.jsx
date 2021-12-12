@@ -7,9 +7,6 @@ const axios = baseURL => {
         timeout: 10000
     });
 
-    //  baseURL: "http://localhost:3300"
-    // || "https://onboardapi.herokuapp.com"
-
     instance.interceptors.request.use((config) => {
         return config;
     }, (error) => {

@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import SearchBar from "components/SearchBar";
 import "styling/navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Dropdown } from "react-bootstrap";
 import axios from "commons/axios";
-import { render } from "react-dom";
 
 function NavBar({ user, setUser, setSearch }) {
   const navigate = useNavigate();
@@ -33,7 +32,7 @@ function NavBar({ user, setUser, setSearch }) {
 
   useEffect(() => {
     renderImage();
-  }, [user.image]);
+  });
 
   function renderImage() {
     return (

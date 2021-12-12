@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "commons/axios";
 import NavBar from "components/NavBar";
 import JobPost from "components/JobPost";
-import "styling/main.css";
-import "styling/jobshow.css";
 
 function Favorites({ user, setUser, setSearch }) {
   const ALL = "All";
@@ -16,14 +14,6 @@ function Favorites({ user, setUser, setSearch }) {
       setPosts(response.data);
     });
   }, [appliedStatus]);
-
-  useEffect(() => {
-    render();
-  }, [appliedStatus]);
-
-  useEffect(() => {
-    renderNavbar();
-  }, [user.image]);
 
   function renderNavbar() {
     return <NavBar user={user} setUser={setUser} setSearch={setSearch} />;
@@ -39,7 +29,6 @@ function Favorites({ user, setUser, setSearch }) {
         </div>
       );
     } else {
-      let status = appliedStatus;
       return (
         <div>
           {posts.map((post) =>

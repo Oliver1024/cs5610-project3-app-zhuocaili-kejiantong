@@ -1,6 +1,5 @@
 import React from 'react'
 import SearchBar from 'components/SearchBar'
-import 'styling/home.css'
 import { Link } from 'react-router-dom'
 
 function Home(props) {

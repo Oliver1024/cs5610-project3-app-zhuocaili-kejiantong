@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import NavBar from "components/NavBar";
 import JobPost from "components/JobPost";
 import axios from "commons/axios";
-import "styling/main.css";
 
 function Main(props) {
   const [posts, setPosts] = useState([]);
@@ -13,16 +12,11 @@ function Main(props) {
       .get(`/api/jobs/search/${result}`)
       .then((response) => {
         setPosts(response.data);
-        render();
       })
       .catch((err) => {
         setPosts([]);
       });
   }, [props.search]);
-
-  useEffect(() => {
-    renderNavbar();
-  }, [props.user.image]);
 
   function renderNavbar() {
     return (

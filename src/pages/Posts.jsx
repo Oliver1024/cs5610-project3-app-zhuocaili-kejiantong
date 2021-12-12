@@ -3,8 +3,6 @@ import axios from "commons/axios";
 import { Link } from "react-router-dom";
 import NavBar from "components/NavBar";
 import JobPost from "components/JobPost";
-import "styling/main.css";
-import "styling/jobshow.css";
 
 function Posts({ user, setUser, setSearch }) {
   const [posts, setPosts] = useState([]);
@@ -13,10 +11,6 @@ function Posts({ user, setUser, setSearch }) {
       setPosts(response.data);
     });
   }, []);
-
-  useEffect(() => {
-    renderNavbar();
-  }, [user.image]);
 
   function renderNavbar() {
     return <NavBar user={user} setUser={setUser} setSearch={setSearch} />;

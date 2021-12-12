@@ -8,6 +8,8 @@ import "styling/main.css";
 import "styling/jobshow.css";
 import "styling/home.css";
 import "styling/job.css";
+import "styling/login-register.css";
+
 require("dotenv").config();
 
 ReactDOM.render(

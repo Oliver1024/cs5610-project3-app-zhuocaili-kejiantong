@@ -1,13 +1,10 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "commons/axios";
-import "styling/jobshow.css";
-import "styling/job.css";
-import "styling/login-register.css";
 import { toast } from "react-toastify";
 import JoditEditor from "jodit-react";
 
-function EditPost(props) {
+function EditPost() {
   const navigate = useNavigate();
   const [inputImage, setInputImage] = useState(undefined);
 

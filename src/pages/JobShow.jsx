@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import NavBar from "components/NavBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,8 +6,6 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faMoneyBill } from "@fortawesome/free-solid-svg-icons";
 import { toast } from "react-toastify";
-import "styling/jobshow.css";
-import "styling/job.css";
 import axios from "commons/axios";
 
 function JobShow({ user, setUser, setSearch }) {
@@ -34,6 +32,7 @@ function JobShow({ user, setUser, setSearch }) {
   };
 
   useEffect(() => {
+    const id = window.location.pathname.replace("/job/", "");
     axios
       .get(`/api/jobs/job/${id}`)
       .then((res) => {
@@ -41,9 +40,10 @@ function JobShow({ user, setUser, setSearch }) {
         setCurStatus(POSITIVE);
       })
       .catch((err) => {
-        navigate(-1);
+        toast.error("Error is found")
       });
   }, []);
+
   useEffect(() => {
     const id = window.location.pathname.replace("/job/", "");
     axios.get("/api/users/favorites").then((response) => {
@@ -52,7 +52,6 @@ function JobShow({ user, setUser, setSearch }) {
       );
       if (idx !== -1) {
         setFavoriteStatus(POSITIVE);
-        console.log(response.data[idx]);
         setAppliedStatus(response.data[idx].status);
       } else setFavoriteStatus(NEGATIVE);
     });
@@ -215,7 +214,7 @@ function JobShow({ user, setUser, setSearch }) {
                   </p>
                 </div>
                 {job.image !== "" ? (
-                  <img src={job.image} className="job-image" />
+                  <img src={job.image} className="job-image" alt=""/>
                 ) : null}
                 <div className="d-flex">
                   <div className="text-muted job-subtitle mb-3 mx-3">
