@@ -42,7 +42,7 @@ function Router() {
           status: LOGGEDOUT,
         }));
       });
-  }, [user.status]);
+  }, [user.status, user.image]);
 
   const [search, setSearch] = useState("");
 
