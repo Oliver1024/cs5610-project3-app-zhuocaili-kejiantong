@@ -20,10 +20,6 @@ function UserProfile({ user, setUser }) {
   });
 
   const handleSubmit = async () => {
-    setUser({
-      ...user,
-      status: "LOADING",
-    });
     const data = new FormData();
     data.append("file", inputImage);
     data.append("upload_preset", process.env.REACT_APP_CLOUD_UPLOAD_PRESET);
@@ -127,6 +123,10 @@ function UserProfile({ user, setUser }) {
           <button
             className="btn-job d-flex justify-content-center align-items-center mt-5"
             onClick={() => {
+              setUser({
+                ...user,
+                status: "LOADING",
+              });
               handleSubmit();
             }}
           >
