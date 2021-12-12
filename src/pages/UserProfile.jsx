@@ -34,6 +34,10 @@ function UserProfile({ user, setUser }) {
         axios
           .put("/api/users/profile", { ...userData, image: data.url })
           .then((response) => {
+            setUser({
+              ...user,
+              status: "LOADING",
+            });
             navigate(-1);
             toast.success("Successfully update information");
           })
