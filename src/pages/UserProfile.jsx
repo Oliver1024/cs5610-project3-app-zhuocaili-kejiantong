@@ -34,7 +34,7 @@ function UserProfile({ user, setUser }) {
         axios
           .put("/api/users/profile", { ...userData, image: data.url })
           .then((response) => {
-            navigate(-1, { replace: true });
+            navigate('/main', { replace: true });
             toast.success("Successfully update information");
           })
           .catch((error) => {
