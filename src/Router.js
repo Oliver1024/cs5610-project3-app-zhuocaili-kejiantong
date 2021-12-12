@@ -25,7 +25,7 @@ function Router() {
     image: "",
   });
 
-  useMemo(() => {
+  useEffect(() => {
     axios
       .get("/api/users/currentUser")
       .then((response) => {
@@ -79,7 +79,10 @@ function Router() {
           }
         />
         {user.status !== LOGGEDOUT ? (
-          <Route path="/profile" element={<UserProfile user={user} setUser={setUser}/>} />
+          <Route
+            path="/profile"
+            element={<UserProfile user={user} setUser={setUser} />}
+          />
         ) : null}
         {user.status !== LOGGEDOUT ? (
           <Route path="/create" element={<CreatePost user={user} />} />

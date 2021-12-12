@@ -13,19 +13,6 @@ function NavBar({ user, setUser, setSearch }) {
   const LOGGEDOUT = "LOGGEDOUT";
   const LOADING = "LOADING";
 
-  const [userData, setUserData] = useState({});
-
-  useEffect(async () => {
-    await axios
-      .get("/api/users/profile")
-      .then((response) => {
-        setUserData(response.data);
-      })
-      .catch((error) => {
-        setUserData({});
-      });
-  }, []);
-
   const logout = () => {
     axios
       .get("/api/users/logout")
@@ -54,12 +41,8 @@ function NavBar({ user, setUser, setSearch }) {
               id="dropdown-basic"
             >
               <div>
-                {userData.image !== "" ? (
-                  <img
-                    src={userData.image}
-                    className="profile-image mx-3"
-                    alt=""
-                  />
+                {user.image !== "" ? (
+                  <img src={user.image} className="profile-image mx-3" alt="" />
                 ) : null}
                 {user.username}
               </div>
