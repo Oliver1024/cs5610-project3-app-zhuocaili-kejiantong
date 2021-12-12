@@ -22,7 +22,7 @@ function UserProfile({ user, setUser }) {
   const handleSubmit = async () => {
     setUser({
       ...user,
-      image: "LOADING",
+      status: "LOADING",
     });
     const data = new FormData();
     data.append("file", inputImage);
@@ -38,7 +38,7 @@ function UserProfile({ user, setUser }) {
         axios
           .put("/api/users/profile", { ...userData, image: data.url })
           .then((response) => {
-            navigate(-1);
+            navigate(-1, { replace: true });
             toast.success("Successfully update information");
           })
           .catch((error) => {
