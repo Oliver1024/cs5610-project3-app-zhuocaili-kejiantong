@@ -34,7 +34,12 @@ function UserProfile({ user, setUser }) {
         axios
           .put("/api/users/profile", { ...userData, image: data.url })
           .then((response) => {
-            navigate('/main', { replace: true });
+            setUser({
+              ...user,
+              image: response.data.image,
+            });
+            navigate("/main", { replace: true });
+
             toast.success("Successfully update information");
           })
           .catch((error) => {
@@ -123,10 +128,6 @@ function UserProfile({ user, setUser }) {
           <button
             className="btn-job d-flex justify-content-center align-items-center mt-5"
             onClick={() => {
-              setUser({
-                ...user,
-                status: "LOADING",
-              });
               handleSubmit();
             }}
           >
