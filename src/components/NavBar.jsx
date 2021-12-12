@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Dropdown } from "react-bootstrap";
 import axios from "commons/axios";
+import { render } from "react-dom";
 
 function NavBar({ user, setUser, setSearch }) {
   const navigate = useNavigate();
@@ -30,6 +31,21 @@ function NavBar({ user, setUser, setSearch }) {
       });
   };
 
+  useEffect(() => {
+    renderImage();
+  }, [user.image]);
+
+  function renderImage() {
+    return (
+      <div>
+        {user.image !== "" ? (
+          <img src={user.image} className="profile-image mx-3" alt="" />
+        ) : null}
+        {user.username}
+      </div>
+    );
+  }
+
   function renderLoggedIn() {
     if (user.status === LOGGEDIN) {
       return (
@@ -40,12 +56,7 @@ function NavBar({ user, setUser, setSearch }) {
               className="navbar-btn-onboard btn-profile-menu"
               id="dropdown-basic"
             >
-              <div>
-                {user.image !== "" ? (
-                  <img src={user.image} className="profile-image mx-3" alt="" />
-                ) : null}
-                {user.username}
-              </div>
+              {renderImage()}
             </Dropdown.Toggle>
             <Dropdown.Menu className="w-auto dropdown-menu">
               <Dropdown.Item className="navbar-btn-onboard" href="/profile">
